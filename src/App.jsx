@@ -1,6 +1,17 @@
+import './layout.scss'
+import Navbar from './components/navbars/Navbar.jsx'
+import HomePage from './Routes/homePage/homePage.jsx'
+
 function App() {
   return (
-    <div>Hello World</div>
+    <div className="layout">
+      <div className="navbar">
+        <Navbar />
+      </div>
+      <div className="content">
+        <HomePage/>
+      </div>
+    </div>
   )
 }
 
