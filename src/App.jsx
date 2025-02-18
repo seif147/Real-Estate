@@ -2,7 +2,7 @@ import HomePage from './Routes/homePage/homePage.jsx';
 import ListPage from "./Routes/listPage/listPage.jsx";
 import Layout from "./Routes/layout/layout.jsx";
 import SinglePage from "./Routes/singlePage/singlePage.jsx";
-//import ProfilePage from "./Routes/profilePage/profilePage.jsx";
+import ProfilePage from "./Routes/profilePage/profilePage.jsx";
 import Login from "./Routes/login/login.jsx";
 //import Register from "./Routes/register/register.jsx";
 
@@ -19,26 +19,26 @@ function App() {
     {
       path: "/",
       element: <Layout />,
-      children:[
+      children: [
         {
-          path:"/",
-          element:<HomePage/>
+          path: "/",
+          element: <HomePage />
         },
         {
-          path:"/list",
-          element:<ListPage/>
+          path: "/list",
+          element: <ListPage />
         },
         {
-          path:"/:id",
-          element:<SinglePage/>
+          path: "/:id",
+          element: <SinglePage />
         },
-        // {
-        //   path:"/profile",
-        //   element:<ProfilePage/>
-        // },
         {
-          path:"/login",
-          element:<Login/>
+           path:"/profile",
+           element:<ProfilePage/>
+        },
+        {
+          path: "/login",
+          element: <Login />
         },
         // {
         //   path:"/register",
@@ -46,10 +46,10 @@ function App() {
         // }
       ]
     }
-  ]);  
+  ]);
 
   return (
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   );
 }
 
